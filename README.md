@@ -12,7 +12,8 @@ C/C++ and Python programmer with a keep interest in algorithms. Passionate about
 Skills:
 * C/C++
 * Python
-* Problem-solving
+* Rust (currently learning)
+* DS/A
 * Git
 
 Interests:
