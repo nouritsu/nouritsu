@@ -7,7 +7,7 @@ Contact : [Email](mailto:aneesh1701@gmail.com)
 ![](https://dcbadge.vercel.app/api/shield/706777978792837151?compact=true)
 
 # About me
-C/C++ and Python programmer with a keep interest in algorithms. Passionate about solving complex problems and creating efficient solutions. Currently pursuing AS levels while gaining valuable industry experience through internships and tutoring. Here is my [resume](https://drive.google.com/file/d/1X_BPgCwcgIryGQCVFdSEHENjvjLKHH9l/view?usp=sharing).
+C/C++ and Python programmer with a keen interest in algorithms. Passionate about solving complex problems and creating efficient solutions. Currently pursuing AS levels while gaining valuable industry experience through internships and tutoring. Here is my [resume](https://drive.google.com/file/d/1X_BPgCwcgIryGQCVFdSEHENjvjLKHH9l/view?usp=sharing).
 
 Skills:
 * C/C++
