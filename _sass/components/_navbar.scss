@@ -44,18 +44,11 @@
 	.navbar-link {
 		@include nav-link-styles;
 	}
-	// Ensure internal and external links in navbar also use the mixin styles
+
+	// Ensure internal and external links in navbar also use the same styles
 	.internal-links a,
 	.external-links a {
 		@include nav-link-styles;
-
-		// Ensure only the span content gets highlighted on hover
-		&:hover {
-			span {
-				text-decoration: underline;
-				transform: scale(1.1);
-			}
-		}
 	}
 }
 

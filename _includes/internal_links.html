@@ -1,24 +1,23 @@
 <div class="internal-links">
-	{% assign current_path = page.url %}
 	<a
 		href="/about"
 		class="link-about"
 	>
-		{% if current_path contains '/about' %}(<span>about</span>){% else
+		{% if page.url contains '/about' %}(<span>about</span>){% else
 		%}[<span>about</span>]{% endif %}
 	</a>
 	<a
 		href="/blog"
 		class="link-blog"
 	>
-		{% if current_path contains '/blog' %}(<span>blog</span>){% else
+		{% if page.url contains '/blog' %}(<span>blog</span>){% else
 		%}[<span>blog</span>]{% endif %}
 	</a>
 	<a
 		href="/projects"
 		class="link-projects"
 	>
-		{% if current_path contains '/projects' %}(<span>projects</span>){% else
+		{% if page.url contains '/projects' %}(<span>projects</span>){% else
 		%}[<span>projects</span>]{% endif %}
 	</a>
 </div>

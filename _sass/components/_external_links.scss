@@ -10,19 +10,10 @@
 			position: relative;
 			min-width: max-content; // Ensure consistent width
 		}
-
 		&.link-contact {
 			color: var(--ctp-pink);
 			position: relative;
 			min-width: max-content; // Ensure consistent width
-		}
-
-		// Ensure brackets/parentheses don't get highlighted
-		&:hover {
-			span {
-				text-decoration: underline;
-				transform: scale(1.1);
-			}
 		}
 	}
 }

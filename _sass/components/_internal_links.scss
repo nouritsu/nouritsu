@@ -26,17 +26,8 @@
 		&.link-blog {
 			color: var(--ctp-yellow);
 		}
-
 		&.link-projects {
 			color: var(--ctp-green);
-		}
-
-		// Ensure brackets/parentheses don't get highlighted
-		&:hover {
-			span {
-				text-decoration: underline;
-				transform: scale(1.1);
-			}
 		}
 	}
 }

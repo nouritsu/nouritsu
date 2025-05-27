@@ -16,32 +16,11 @@
 	text-align: center;
 }
 
-// Create a shared mixin for common link styles
-@mixin nav-link-styles {
-	text-decoration: none;
-	font-family: var(--font-mono); // Use consistent font variable
-	font-size: 1rem;
-	display: inline-block;
-	transition: all 0.2s ease-in-out;
-
-	span {
-		transition: all 0.2s ease-in-out;
-	}
-
-	&:hover {
-		span {
-			text-decoration: underline;
-			transform: scale(1.1);
-		}
-	}
-}
-
 .landing-links {
 	text-align: center;
 	margin-top: 3rem;
 
 	a {
-		@include nav-link-styles;
 		margin: 0 0.5rem;
 		font-size: 1.5rem; // Larger for landing page
 	}

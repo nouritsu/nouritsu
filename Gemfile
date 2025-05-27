@@ -3,6 +3,9 @@ source "https://rubygems.org"
 # Jekyll version
 gem "jekyll", "~> 4.4.1"
 
+# Logger gem to avoid deprecation warnings
+gem "logger"
+
 # Theme (optional, using custom theme via CSS)
 # gem "minima", "~> 2.5"
 
