@@ -21,7 +21,7 @@ jobs:
           docker run --rm \
               -v ${{ github.workspace }}:/srv/jekyll \
               -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-              jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+              jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future --trace"
 
       - name: FTP Deploy to Hostinger
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
