@@ -1,0 +1,35 @@
+name: Jekyll site CI and Deploy
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Create _site directory on runner
+        run: mkdir -p ${{ github.workspace }}/_site
+
+      - name: Build the site in the jekyll/builder container
+
+        run: |
+          docker run --rm \
+            -v ${{ github.workspace }}:/srv/jekyll \
+            -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+            jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+      - name: FTP Deploy to Hostinger
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4 # Check for the latest version
+        with:
+          server: ${{ secrets.FTP_IP }}
+          username: ${{ secrets.FTP_USR }}
+          password: ${{ secrets.FTP_PASS }}
+
+          local-dir: ./_site/
+          remote-dir: ${{ secrets.FTP_DIR }
