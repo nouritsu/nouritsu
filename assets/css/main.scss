@@ -9,9 +9,7 @@
 
 /* Theme system */
 @import "theme/light";
-@media (prefers-color-scheme: dark) {
-	@import "theme/dark";
-}
+@import "theme/dark";
 
 /* Components */
 @import "components/navbar";
