@@ -32,4 +32,4 @@ jobs:
           password: ${{ secrets.FTP_PASS }}
 
           local-dir: ./_site/
-          remote-dir: ${{ secrets.FTP_DIR }
+          server-dir: ${{ secrets.FTP_DIR }}
