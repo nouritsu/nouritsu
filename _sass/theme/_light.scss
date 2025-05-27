@@ -1,0 +1,88 @@
+:root {
+  // Catppuccin Latte Palette
+  --ctp-rosewater: #dc8a78;
+  --ctp-flamingo: #dd7878;
+  --ctp-pink: #ea76cb;
+  --ctp-mauve: #8839ef;
+  --ctp-red: #d20f39;
+  --ctp-maroon: #e64553;
+  --ctp-peach: #fe640b;
+  --ctp-yellow: #df8e1d;
+  --ctp-green: #40a02b;
+  --ctp-teal: #179299;
+  --ctp-sky: #04a5e5;
+  --ctp-sapphire: #209fb5;
+  --ctp-blue: #1e66f5;
+  --ctp-lavender: #7287fd;
+  --ctp-text: #4c4f69;
+  --ctp-subtext1: #5c5f77;
+  --ctp-subtext0: #6c6f85;
+  --ctp-overlay2: #7c7f93;
+  --ctp-overlay1: #8c8fa1;
+  --ctp-overlay0: #9ca0b0;
+  --ctp-surface2: #acb0be;
+  --ctp-surface1: #bcc0cc;
+  --ctp-surface0: #ccd0da;
+  --ctp-base: #eff1f5;      // Lightest background
+  --ctp-mantle: #e6e9ef;    // Slightly darker background
+  --ctp-crust: #dce0e8;     // Darkest background element for Latte
+  // Theme Variables
+  --bg-color: var(--ctp-base);
+  --fg-color: var(--ctp-text);
+  --primary-color: var(--ctp-blue); // Latte often uses Blue as a primary
+  --secondary-color: var(--ctp-mauve);
+  --accent-color: var(--ctp-pink);
+  --border-color: var(--ctp-surface0);
+  --link-color: var(--ctp-sapphire);
+  --link-hover-color: var(--ctp-sky);
+  --subtle-text-color: var(--ctp-subtext0);
+  --code-bg-color: var(--ctp-mantle);
+  --code-fg-color: var(--ctp-text);
+  --table-header-bg: var(--ctp-surface0);
+  --hr-color: var(--ctp-overlay0);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--fg-color);
+}
+
+a {
+  color: var(--link-color);
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-color);
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--hr-color);
+  // If using your existing hr:before/after, you might set their color:
+  // color: var(--hr-color);
+}
+
+table, th, td {
+  border: thin solid var(--border-color);
+}
+
+pre, code {
+  background-color: var(--code-bg-color);
+  color: var(--code-fg-color);
+  border-radius: 4px;
+  padding: 0.2em 0.4em;
+}
+
+pre {
+  padding: 1em;
+  overflow-x: auto;
+}
+
+// Example of using a subtext color
+.landing-subtext {
+  color: var(--subtle-text-color);
+}

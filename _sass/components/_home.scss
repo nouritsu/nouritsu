@@ -1,0 +1,56 @@
+// Remove front matter for partial files
+.landing-hero {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	text-align: center;
+	padding: 1rem; // Add padding for mobile
+}
+
+.landing-subtext {
+	font-size: 2.6;
+	margin: 0;
+	color: var(--subtle-text-color); // Use variable for text color
+	text-align: center;
+}
+
+// Create a shared mixin for common link styles
+@mixin nav-link-styles {
+	text-decoration: none;
+	font-family: var(--font-mono); // Use consistent font variable
+	font-size: 1rem;
+	display: inline-block;
+	transition: all 0.2s ease-in-out;
+
+	span {
+		transition: all 0.2s ease-in-out;
+	}
+
+	&:hover {
+		span {
+			text-decoration: underline;
+			transform: scale(1.1);
+		}
+	}
+}
+
+.landing-links {
+	text-align: center;
+	margin-top: 3rem;
+
+	a {
+		@include nav-link-styles;
+		margin: 0 0.5rem;
+		font-size: 1.5rem; // Larger for landing page
+	}
+
+	.link-separator {
+		color: var(--subtle-text-color);
+		font-size: 2.6rem;
+		vertical-align: baseline;
+		position: relative;
+		top: 0.2em;
+	}
+}

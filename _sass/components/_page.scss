@@ -1,0 +1,31 @@
+// Page styles
+.page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  
+  .page-header {
+    margin-bottom: 2rem;
+    text-align: center;
+    
+    .page-title {
+      margin-bottom: 0.5rem;
+      color: var(--fg-color);
+    }
+    
+    .page-subtitle {
+      color: var(--subtle-text-color);
+      font-size: 1.2rem;
+      margin: 0;
+    }
+  }
+  
+  .page-content {
+    line-height: 1.8;
+    
+    // Better spacing for content
+    > * + * {
+      margin-top: 1.5rem;
+    }
+  }
+}

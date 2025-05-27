@@ -1,0 +1,42 @@
+.internal-links {
+	display: inline-flex;
+	gap: 1rem;
+
+	a {
+		@include nav-link-styles;
+
+		// Color coding for different sections - using href selectors like navbar
+		&[href="/about"] {
+			color: var(--ctp-red);
+		}
+
+		&[href="/blog"] {
+			color: var(--ctp-yellow);
+		}
+
+		&[href="/projects"] {
+			color: var(--ctp-green);
+		}
+
+		// Also keep class-based selectors for backwards compatibility
+		&.link-about {
+			color: var(--ctp-red);
+		}
+
+		&.link-blog {
+			color: var(--ctp-yellow);
+		}
+
+		&.link-projects {
+			color: var(--ctp-green);
+		}
+
+		// Ensure brackets/parentheses don't get highlighted
+		&:hover {
+			span {
+				text-decoration: underline;
+				transform: scale(1.1);
+			}
+		}
+	}
+}

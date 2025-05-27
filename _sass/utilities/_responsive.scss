@@ -1,0 +1,36 @@
+// Responsive utilities
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+// Hide/show utilities
+.hidden { display: none; }
+.visible { display: block; }
+
+@each $breakpoint, $value in $breakpoints {
+  @media (max-width: $value) {
+    .hidden-#{$breakpoint} { display: none; }
+  }
+  
+  @media (min-width: $value) {
+    .visible-#{$breakpoint} { display: block; }
+  }
+}
+
+// Responsive text sizes
+@media (max-width: 768px) {
+  .landing-hero .ascii-art {
+    font-size: 0.8rem;
+  }
+  
+  .landing-subtext {
+    font-size: 1.5rem;
+  }
+  
+  .landing-links a {
+    font-size: 1.2rem;
+  }
+}

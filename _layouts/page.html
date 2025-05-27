@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+{% include navbar.html %}
+
+<article class="page">
+	<header class="page-header">
+		{% if page.subtitle %}
+		<p class="page-subtitle">{{ page.subtitle }}</p>
+		{% endif %}
+	</header>
+
+	<div class="page-content">{{ content }}</div>
+</article>
