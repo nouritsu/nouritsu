@@ -1,7 +1,7 @@
 ---
 layout: nonav
 title: "404, not found"
-permalink: /404
+permalink: /404.html
 ---
 
 <div class="hero-404">
