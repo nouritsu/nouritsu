@@ -19,9 +19,10 @@ jobs:
       - name: Build the site in the jekyll/builder container
         run: |
           docker run --rm \
+              --user "$(id -u):$(id -g)" \
               -v ${{ github.workspace }}:/srv/jekyll \
               -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-              jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future --trace"
+              jekyll/builder:latest /bin/bash -c "jekyll build --future --trace"
 
       - name: FTP Deploy to Hostinger
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
