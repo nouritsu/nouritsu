@@ -1,24 +1,23 @@
 .internal-links {
-	display: inline-flex;
 	gap: 1rem;
+	display: inline-flex;
+
+	.hoverable-link {
+		transition: all 0.2s ease-in-out;
+		&:hover {
+			transform: scale(1.1);
+
+			.link-text {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.bracket-open .bracket-close {
+		text-decoration: none;
+	}
 
 	a {
-		@include nav-link-styles;
-
-		// Color coding for different sections - using href selectors like navbar
-		&[href="/about"] {
-			color: var(--ctp-red);
-		}
-
-		&[href="/blog"] {
-			color: var(--ctp-yellow);
-		}
-
-		&[href="/projects"] {
-			color: var(--ctp-green);
-		}
-
-		// Also keep class-based selectors for backwards compatibility
 		&.link-about {
 			color: var(--ctp-red);
 		}
@@ -26,6 +25,7 @@
 		&.link-blog {
 			color: var(--ctp-yellow);
 		}
+
 		&.link-projects {
 			color: var(--ctp-green);
 		}

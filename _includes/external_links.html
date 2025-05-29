@@ -1,16 +1,60 @@
 <div class="external-links">
 	<a
+		class="link-contact hoverable-link"
 		href="mailto:ab@nouritsu.com"
-		class="link-contact"
-		onmouseover="this.innerHTML = '(<span>email</span>)'"
-		onmouseout="this.innerHTML = '[<span>contact</span>]'"
-		>[<span>contact</span>]</a
 	>
+		<span class="bracket-open">[</span><span class="link-text">contact</span
+		><span class="bracket-close">]</span>
+	</a>
+
 	<a
+		class="link-cv hoverable-link"
 		href="https://www.youtube.com/watch?v=xvFZjo5PgG0"
-		class="link-cv"
-		onmouseover="this.innerHTML = '(<span>get</span>)'"
-		onmouseout="this.innerHTML = '[<span>cv</span>]'"
-		>[<span>cv</span>]</a
 	>
+		<span class="bracket-open">[</span><span class="link-text">cv</span
+		><span class="bracket-close">]</span>
+	</a>
+
+	<a
+		class="link-github hoverable-link"
+		href="http://github.com/nouritsu"
+	>
+		<span class="bracket-open">[</span><span class="link-text">github</span
+		><span class="bracket-close">]</span>
+	</a>
 </div>
+
+<script>
+	document.addEventListener("DOMContentLoaded", () => {
+		const links = document.querySelectorAll(".external-links a");
+
+		links.forEach((link) => {
+			const open = link.querySelector(".bracket-open");
+			const close = link.querySelector(".bracket-close");
+			const text = link.childNodes[2]; // I really should learn HTML, this does not look good
+
+			if (open && close) {
+				const open_original = open.textContent;
+				const close_original = close.textContent;
+				const text_original = text.textContent;
+
+				link.addEventListener("mouseover", () => {
+					open.textContent = "(";
+					close.textContent = ")";
+
+					if (text_original === "contact") {
+						text.textContent = "email";
+					} else if (text_original === "cv") {
+						text.textContent = "get";
+					}
+				});
+
+				link.addEventListener("mouseout", () => {
+					open.textContent = open_original;
+					close.textContent = close_original;
+					text.textContent = text_original;
+				});
+			}
+		});
+	});
+</script>

@@ -1,19 +1,33 @@
 .external-links {
-	display: inline-flex;
 	gap: 1rem;
+	display: inline-flex;
+
+	.hoverable-link {
+		transition: all 0.2s ease-in-out;
+		&:hover {
+			transform: scale(1.1);
+
+			.link-text {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.bracket-open .bracket-close {
+		text-decoration: none;
+	}
 
 	a {
-		@include nav-link-styles;
+		&.link-contact {
+			color: var(--ctp-pink);
+		}
 
 		&.link-cv {
 			color: var(--ctp-mauve);
-			position: relative;
-			min-width: max-content; // Ensure consistent width
 		}
-		&.link-contact {
-			color: var(--ctp-pink);
-			position: relative;
-			min-width: max-content; // Ensure consistent width
+
+		&.link-github {
+			color: var(--ctp-subtext0);
 		}
 	}
 }
