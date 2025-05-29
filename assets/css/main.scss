@@ -11,6 +11,8 @@
 @import "theme/dark";
 
 /* Components */
+@import "components/404_logo";
+@import "components/404";
 @import "components/navbar";
 @import "components/logo";
 @import "components/internal_links";
@@ -23,3 +25,4 @@
 /* Utilities */
 @import "utilities/spacing";
 @import "utilities/responsive";
+

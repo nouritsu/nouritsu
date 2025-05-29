@@ -1,4 +1,3 @@
-// Remove front matter for partial files
 .landing-hero {
 	display: flex;
 	flex-direction: column;
@@ -24,12 +23,5 @@
 		margin: 0 0.5rem;
 		font-size: 1.5rem; // Larger for landing page
 	}
-
-	.link-separator {
-		color: var(--subtle-text-color);
-		font-size: 2.6rem;
-		vertical-align: baseline;
-		position: relative;
-		top: 0.2em;
-	}
 }
+

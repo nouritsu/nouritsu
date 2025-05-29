@@ -1,0 +1,37 @@
+---
+layout: nonav
+title: "404, not found"
+permalink: /404
+---
+
+<div class="hero-404">
+    {% include 404_logo.html %}
+    <p class="notfound-404">Page not found, this site is very much a WIP, check back later!</p>
+    <p class="gohome-404">Wanna go <a href="/" class="hoverable-link"><span class="bracket-open">[</span><span class="link-text">home</span><span class="bracket-close">]</span></a>?</p>
+</div>
+
+<script>
+	document.addEventListener("DOMContentLoaded", () => {
+		const home = document.querySelector(".gohome-404 a");
+
+		if (home) {
+			const open = home.querySelector(".bracket-open");
+			const close = home.querySelector(".bracket-close");
+
+			if (open && close) {
+				const open_original = open.textContent;
+				const close_original = close.textContent;
+
+				home.addEventListener("mouseover", () => {
+					open.textContent = "(";
+					close.textContent = ")";
+				});
+
+				home.addEventListener("mouseout", () => {
+					open.textContent = open_original;
+					close.textContent = close_original;
+				});
+			}
+		}
+	});
+</script>
