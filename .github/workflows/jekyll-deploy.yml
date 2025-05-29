@@ -34,5 +34,6 @@ jobs:
           password: ${{ secrets.FTP_PASS }}
           server-dir: ${{ secrets.FTP_DIR }}/
           local-dir: ./_site/
+          dangerous-clean-slate: true # blow up / on remote before transfer
           
     
