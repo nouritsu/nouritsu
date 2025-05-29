@@ -13,8 +13,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Create _site directory on runner
-        run: mkdir -p ${{ github.workspace }}/_site
+      - name: Create directories for build output and gems
+        run: |
+          mkdir -p ${{ github.workspace }}/_site
+          mkdir -p ${{ github.workspace }}/vendor/bundle
 
       - name: Build the site in the jekyll/builder container
         run: |
@@ -22,7 +24,7 @@ jobs:
               --user "$(id -u):$(id -g)" \
               -v ${{ github.workspace }}:/srv/jekyll \
               -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-              -e BUNDLE_PATH="/srv/jekyll/vendor/bundle" \
+              -v ${{ github.workspace }}/vendor/bundle:/usr/local/bundle \
               jekyll/builder:latest jekyll build --future --trace
 
       - name: FTP Deploy to Hostinger
