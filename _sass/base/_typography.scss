@@ -3,7 +3,7 @@ body {
 	color: var(--fg-color);
 	background-color: var(--bg-color);
 	font-family: "JetBrains Mono";
-	font-size: 1.95rem;
+	font-size: 1.45rem;
 	line-height: 1.6;
 }
 
@@ -18,27 +18,27 @@ h6 {
 }
 
 h1 {
-	font-size: 2.5rem;
+	font-size: 1.9rem;
 }
 
 h2 {
-	font-size: 2rem;
-}
-
-h3 {
-	font-size: 1.75rem;
-}
-
-h4 {
 	font-size: 1.5rem;
 }
 
+h3 {
+	font-size: 1.3rem;
+}
+
+h4 {
+	font-size: 1.15rem;
+}
+
 h5 {
-	font-size: 1.25rem;
+	font-size: 0.95rem;
 }
 
 h6 {
-	font-size: 1rem;
+	font-size: 0.75rem;
 }
 
 p {
@@ -48,18 +48,18 @@ p {
 // Responsive typography
 @media (max-width: 768px) {
 	body {
-		font-size: 1.5rem;
+		font-size: 1.15rem;
 	}
 
 	h1 {
-		font-size: 2rem;
+		font-size: 1.5rem;
 	}
 
 	h2 {
-		font-size: 1.75rem;
+		font-size: 1.3rem;
 	}
 
 	h3 {
-		font-size: 1.5rem;
+		font-size: 1.15rem;
 	}
 }
