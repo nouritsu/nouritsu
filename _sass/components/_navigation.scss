@@ -4,16 +4,16 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
-  
+
   .nav-links {
     display: flex;
     gap: 1rem;
-    
+
     a {
       color: var(--fg-color);
       text-decoration: none;
       transition: color 0.2s ease;
-      
+
       &:hover {
         color: var(--accent-color);
       }
@@ -26,10 +26,10 @@
   margin: 1rem 0;
   font-size: 0.9rem;
   color: var(--subtle-text-color);
-  
+
   a {
     color: var(--accent-color);
-    
+
     &:hover {
       text-decoration: underline;
     }

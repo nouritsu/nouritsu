@@ -3,35 +3,35 @@
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem 1rem;
-  
+
   .post-header {
     margin-bottom: 2rem;
-    
+
     .post-title {
       margin-bottom: 0.5rem;
       color: var(--fg-color);
     }
-    
+
     .post-meta {
       color: var(--subtle-text-color);
       font-size: 0.9rem;
     }
   }
-  
+
   .post-content {
     line-height: 1.8;
-    
+
     // Better spacing for content
-    > * + * {
+    >*+* {
       margin-top: 1.5rem;
     }
   }
-  
+
   .post-tags {
     margin-top: 2rem;
     padding-top: 1rem;
     border-top: 1px solid var(--border-color);
-    
+
     .tag {
       display: inline-block;
       background-color: var(--accent-color);

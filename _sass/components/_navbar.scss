@@ -41,47 +41,65 @@
 
 /* Body padding to account for fixed navbar */
 body {
-	padding-top: 80px; /* Adjust this value based on your navbar's actual height */
+	padding-top: 80px;
+	/* Adjust this value based on your navbar's actual height */
 
 	&.no-navbar {
-		padding-top: 0; /* Remove padding if navbar is not present */
+		padding-top: 0;
+		/* Remove padding if navbar is not present */
 	}
 }
 
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
 	.navbar {
-		padding: 0.75rem 1rem; /* Adjusted padding */
-		flex-direction: column; /* Stack navbar items vertically */
-		gap: 0.75rem; /* Gap between navbar-left/logo and navbar-right */
+		padding: 0.75rem 1rem;
+		/* Adjusted padding */
+		flex-direction: column;
+		/* Stack navbar items vertically */
+		gap: 0.75rem;
+		/* Gap between navbar-left/logo and navbar-right */
 
 		.navbar-left {
-			flex-direction: column; /* Stack logo and links if they were separate */
-			gap: 0.75rem; /* Gap between links in the left section */
-			align-items: center; /* Center items in column layout */
-			width: 100%; /* Make it take full width */
+			flex-direction: column;
+			/* Stack logo and links if they were separate */
+			gap: 0.75rem;
+			/* Gap between links in the left section */
+			align-items: center;
+			/* Center items in column layout */
+			width: 100%;
+			/* Make it take full width */
 
-			> .navbar-logo {
-				margin-bottom: 0.5rem; /* Add some space below logo if links stack under it */
+			>.navbar-logo {
+				margin-bottom: 0.5rem;
+				/* Add some space below logo if links stack under it */
 			}
 
-			> .hoverable-link {
+			>.hoverable-link {
 				/* Target links directly inside navbar-left */
-				font-size: 0.9rem; /* Adjust font size for smaller screens */
-				padding: 0.5rem; /* Increase tappable area */
+				font-size: 0.9rem;
+				/* Adjust font size for smaller screens */
+				padding: 0.5rem;
+				/* Increase tappable area */
 			}
 		}
 
 		.navbar-right {
-			flex-direction: column; /* Stack links in the right section */
-			gap: 0.75rem; /* Gap between links in the right section */
-			align-items: center; /* Center items in column layout */
-			width: 100%; /* Make it take full width */
+			flex-direction: column;
+			/* Stack links in the right section */
+			gap: 0.75rem;
+			/* Gap between links in the right section */
+			align-items: center;
+			/* Center items in column layout */
+			width: 100%;
+			/* Make it take full width */
 
-			> .hoverable-link {
+			>.hoverable-link {
 				/* Target links directly inside navbar-right */
-				font-size: 0.9rem; /* Adjust font size for smaller screens */
-				padding: 0.5rem; /* Increase tappable area */
+				font-size: 0.9rem;
+				/* Adjust font size for smaller screens */
+				padding: 0.5rem;
+				/* Increase tappable area */
 			}
 		}
 	}
@@ -90,7 +108,8 @@ body {
 		/* Adjust padding-top based on the new height of the stacked navbar */
 		/* This will likely be taller than 80px; measure and adjust. */
 		/* Example: */
-		padding-top: 180px; /* Increased to account for taller mobile navbar */
+		padding-top: 180px;
+		/* Increased to account for taller mobile navbar */
 
 		&.no-navbar {
 			padding-top: 0;
