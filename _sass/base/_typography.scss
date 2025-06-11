@@ -1,12 +1,9 @@
-// Typography system
 body {
-	color: var(--fg-color);
-	background-color: var(--bg-color);
-	font-family: "JetBrains Mono";
 	font-size: 1.45rem;
 	line-height: 1.6;
 }
 
+/* Headings */
 h1,
 h2,
 h3,
@@ -41,25 +38,7 @@ h6 {
 	font-size: 0.75rem;
 }
 
+/* Text */
 p {
 	margin: 0 0 1rem 0;
-}
-
-// Responsive typography
-@media (max-width: 768px) {
-	body {
-		font-size: 1.15rem;
-	}
-
-	h1 {
-		font-size: 1.5rem;
-	}
-
-	h2 {
-		font-size: 1.3rem;
-	}
-
-	h3 {
-		font-size: 1.15rem;
-	}
 }

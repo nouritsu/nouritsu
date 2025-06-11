@@ -1,0 +1,94 @@
+:root {
+	// Catppuccin Mocha Palette
+	--ctp-rosewater: #f5e0dc;
+	--ctp-flamingo: #f2cdcd;
+	--ctp-pink: #f5c2e7;
+	--ctp-mauve: #cba6f7;
+	--ctp-red: #f38ba8;
+	--ctp-maroon: #eba0ac;
+	--ctp-peach: #fab387;
+	--ctp-yellow: #f9e2af;
+	--ctp-green: #a6e3a1;
+	--ctp-teal: #94e2d5;
+	--ctp-sky: #89dceb;
+	--ctp-sapphire: #74c7ec;
+	--ctp-blue: #89b4fa;
+	--ctp-lavender: #b4befe;
+	--ctp-text: #cdd6f4;
+	--ctp-subtext1: #bac2de;
+	--ctp-subtext0: #a6adc8;
+	--ctp-overlay2: #9399b2;
+	--ctp-overlay1: #7f849c;
+	--ctp-overlay0: #6c7086;
+	--ctp-surface2: #585b70;
+	--ctp-surface1: #45475a;
+	--ctp-surface0: #313244;
+	--ctp-base: #1e1e2e;
+	--ctp-mantle: #181825;
+	--ctp-crust: #11111b;
+
+	// Theme Variables
+	--bg-color: var(--ctp-base);
+	--fg-color: var(--ctp-text);
+	--text-color: var(--ctp-text);
+	--font-mono: "JetBrains Mono", monospace;
+	--primary-color: var(--ctp-mauve);
+	--secondary-color: var(--ctp-flamingo);
+	--accent-color: var(--ctp-pink);
+	--border-color: var(--ctp-surface1);
+	--link-color: var(--ctp-blue);
+	--link-hover-color: var(--ctp-sky);
+	--subtle-text-color: var(--ctp-subtext0);
+	--code-bg-color: var(--ctp-mantle);
+	--code-fg-color: var(--ctp-text);
+	--table-header-bg: var(--ctp-surface0);
+	--hr-color: var(--ctp-overlay0);
+}
+
+/* Set Default Styles */
+body {
+	background-color: var(--bg-color);
+	color: var(--fg-color);
+	font-family: var(--font-mono);
+}
+
+a {
+	color: var(--link-color);
+}
+
+a:hover {
+	color: var(--link-hover-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--primary-color);
+}
+
+hr {
+	border: 0;
+	border-top: 1px solid var(--hr-color);
+}
+
+table,
+th,
+td {
+	border: thin solid var(--border-color);
+}
+
+pre,
+code {
+	background-color: var(--code-bg-color);
+	color: var(--code-fg-color);
+	border-radius: 4px;
+	padding: 0.2em 0.4em;
+}
+
+pre {
+	padding: 1em;
+	overflow-x: auto;
+}

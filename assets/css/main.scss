@@ -1,29 +1,23 @@
 ---
 ---
 
-/* Base styles */
-@import "base/reset";
+@import "reset";
+
+@import "base/theme";
 @import "base/typography";
-@import "base/layout";
 
-/* Theme system */
-@import "theme/light";
-@import "theme/dark";
-
-/* Components */
 @import "components/404_logo";
-@import "components/404";
-@import "components/navbar";
-@import "components/logo";
-@import "components/internal_links";
 @import "components/external_links";
-@import "components/home";
-@import "components/navigation";
-@import "components/post";
-@import "components/page";
-@import "components/about";
+@import "components/internal_links";
+@import "components/logo";
+@import "components/navbar";
 
-/* Utilities */
-@import "utilities/spacing";
-@import "utilities/responsive";
+@import "layouts/page";
+@import "layouts/post";
 
+@import "pages/404";
+@import "pages/about";
+@import "pages/home";
+
+// Last
+@import "responsive";
