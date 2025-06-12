@@ -1,0 +1,137 @@
+/* Restructured from `rougify style base16.dark > style.css` */
+/* Replaced base16.dark with site theme */
+.highlight {
+	color: var(--code-fg-color);
+	background-color: var(--code-bg-color);
+
+	table td {
+		padding: 5px;
+	}
+
+	table pre {
+		margin: 0;
+	}
+
+	.err {
+		color: var(--code-bg-color);
+		background-color: var(--red);
+	}
+
+	.c,
+	.ch,
+	.cd,
+	.cm,
+	.c1,
+	.cs {
+		color: var(--overlay0);
+	}
+
+	.cp {
+		color: var(--mauve);
+	}
+
+	.cpf {
+		color: var(--green);
+	}
+
+	.nt {
+		color: var(--yellow);
+	}
+
+	.nf {
+		color: var(--blue);
+	}
+
+	.nb {
+		color: var(--sapphire);
+	}
+
+	.o,
+	.ow {
+		color: var(--mauve);
+	}
+
+	.p,
+	.pi {
+		color: var(--text);
+	}
+
+	.gi {
+		color: var(--green);
+	}
+
+	.gd {
+		color: var(--red);
+	}
+
+	.gh {
+		color: var(--blue);
+		background-color: var(--crust);
+		font-weight: bold;
+	}
+
+	.k,
+	.kn,
+	.kp,
+	.kr,
+	.kv,
+	.kc {
+		color: var(--red);
+		font-weight: bold;
+	}
+
+	.kt {
+		color: var(--lavender);
+		font-style: italic;
+	}
+
+	.kd {
+		color: var(--mauve);
+	}
+
+	.s,
+	.sb,
+	.sc,
+	.dl,
+	.sd,
+	.s2,
+	.sh,
+	.sx,
+	.s1 {
+		color: var(--green);
+	}
+
+	.sa {
+		color: var(--mauve);
+	}
+
+	.sr {
+		color: var(--sapphire);
+	}
+
+	.si,
+	.se {
+		color: var(--maroon);
+	}
+
+	.nn,
+	.nc,
+	.no {
+		color: var(--yellow);
+	}
+
+	.na {
+		color: var(--sapphire);
+	}
+
+	.m,
+	.mb,
+	.mf,
+	.mh,
+	.mi,
+	.il,
+	.mo,
+	.mx {
+		color: var(--red);
+	}
+}
