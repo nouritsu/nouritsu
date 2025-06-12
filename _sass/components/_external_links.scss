@@ -19,16 +19,15 @@
 
 	a {
 		&.link-contact {
-			color: var(--ctp-pink);
+			color: var(--pink);
 		}
 
 		&.link-cv {
-			color: var(--ctp-mauve);
+			color: var(--mauve);
 		}
 
 		&.link-github {
-			color: var(--ctp-subtext0);
+			color: var(--subtext0);
 		}
 	}
 }
-
