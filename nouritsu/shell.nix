@@ -6,5 +6,6 @@ pkgs.mkShell {
 
   shellHook = ''
     npm install
+    alias serve="npm run dev -- -o"
   '';
 }
