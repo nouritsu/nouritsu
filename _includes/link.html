@@ -1,0 +1,49 @@
+<a
+	class="link-{{include.text}}"
+	href="{{include.href}}"
+>
+	<span class="bracket-open">[</span
+	><span class="link-text">{{include.text}}</span
+	><span class="bracket-close">]</span>
+</a>
+
+<script>
+	document.addEventListener("DOMContentLoaded", () => {
+		const link = document.querySelector(".link-{{include.text}}");
+
+		const open = link.querySelector(".bracket-open");
+		const text = link.querySelector(".link-text");
+		const close = link.querySelector(".bracket-close");
+
+		if (open && close) {
+			const open_original = open.textContent;
+			const close_original = close.textContent;
+
+			link.addEventListener("mouseover", () => {
+				open.textContent = "(";
+				text.textContent = "{{include.hover_text | default: include.text}}";
+				close.textContent = ")";
+			});
+
+			link.addEventListener("mouseout", () => {
+				open.textContent = open_original;
+				text.textContent = "{{ include.text }}";
+				close.textContent = close_original;
+			});
+		}
+	});
+
+	if ("{{include.type}}" === "internal") {
+		const current_page_url = window.location.pathname;
+		if (current_page_url.includes("{{include.text}}")) {
+			const link = document.querySelector(".link-{{include.text}}");
+			const open = link.querySelector(".bracket-open");
+			const close = link.querySelector(".bracket-close");
+
+			if (open && close) {
+				open.textContent = "(";
+				close.textContent = ")";
+			}
+		}
+	}
+</script>
