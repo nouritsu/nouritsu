@@ -11,6 +11,6 @@ pkgs.mkShell {
   shellHook = ''
     npm install
     bundle install
-    alias serve="bundle exec jekyll serve --verbose"
+    alias serve="bundle exec jekyll serve"
   '';
 }
