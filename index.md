@@ -11,4 +11,3 @@ layout: nonav
 		{% include external_links.html %}
 	</div>
 </div>
-
