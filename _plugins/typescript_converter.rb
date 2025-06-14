@@ -4,6 +4,30 @@ require "digest"
 require "fileutils"
 
 module Jekyll
+  class TypeScriptGenerator < Generator
+    safe true
+    priority :low
+
+    def generate(site)
+      Jekyll.logger.info "TypeScriptGenerator:", "Starting TypeScript generation"
+      ts_files = site.static_files.select do |file|
+        file.extname.casecmp(".ts").zero?
+      end
+
+      ts_files.each do |ts_file|
+        Jekyll.logger.info "TypeScriptGenerator:", "Processing #{ts_file.relative_path}"
+        page_dir = File.dirname(ts_file.relative_path)
+        site.pages << Jekyll::Page.new(site, site.source, page_dir, ts_file.name)
+      end
+
+      site.static_files.reject! do |static_file|
+        static_file.extname.casecmp(".ts").zero?
+      end
+    end
+  end
+end
+
+module Jekyll
   class TypeScriptConverter < Converter
     safe true
     priority :low
