@@ -1,6 +1,6 @@
 <a
 	class="link link-{{include.text}}"
-	link-type="{{include.type}}"
+	link-type="{{include.type | default: "external"}}"
 	href="{{include.href | default: "/404"}}"
 >
 	<span class="bracket-open">[</span
