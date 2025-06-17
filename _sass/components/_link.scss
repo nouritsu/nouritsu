@@ -1,0 +1,17 @@
+.link {
+	display: inline-block; // `a` is inline by default, but we need to transform it
+	transition: all 0.2s ease-in-out;
+	transform-origin: center;
+	&:hover {
+		transform: scale(1.1);
+
+		.link-text {
+			text-decoration: underline;
+		}
+	}
+
+	.bracket-open,
+	.bracket-close {
+		text-decoration: none;
+	}
+}
