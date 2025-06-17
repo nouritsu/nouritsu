@@ -6,11 +6,13 @@ pkgs.mkShell {
     rubyPackages_3_4.jekyll
     rubyPackages_3_4.jekyll-feed
     nodejs_24
+
+    mprocs
   ];
 
   shellHook = ''
     npm install
     bundle install
-    alias serve="bundle exec jekyll serve"
+    mprocs
   '';
 }
