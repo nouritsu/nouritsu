@@ -3,114 +3,45 @@
 	top: 0;
 	left: 0;
 	right: 0;
-	padding: 1rem 2rem;
+	padding: 1.5rem 2rem;
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	align-items: center;
 	z-index: 1000;
 	font-family: var(--font-mono, monospace);
 	background-color: var(--bg-color);
+}
 
-	.navbar-left,
-	.navbar-right {
-		gap: 1rem;
-		display: flex;
-		align-items: center;
-	}
-
-	.navbar-logo {
+.navbar-logo {
+	margin-right: 1.2rem;
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: var(--text-color);
+	&:hover {
+		color: var(--mauve);
 		text-decoration: none;
-		color: var(--text-color);
-		transition: transform 0.2s ease-in-out;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		font-size: 1.2rem; // Match the hoverable-link font size
-		font-weight: 500; // Match the hoverable-link font weight
-		line-height: 1; // Ensure consistent line height
-
-		&:hover {
-			transform: scale(1.05);
-		}
-	}
-
-	// Link styles for hoverable links
-	.hoverable-link {
-		font-size: 1.2rem;
 	}
 }
 
-/* Body padding to account for fixed navbar */
+// Adjust padding based on if the navbar is present
 body {
-	padding-top: 80px;
-	/* Adjust this value based on your navbar's actual height */
+	padding-top: 100px;
 
 	&.no-navbar {
 		padding-top: 0;
-		/* Remove padding if navbar is not present */
 	}
 }
 
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
 	.navbar {
-		padding: 0.75rem 1rem;
-		/* Adjusted padding */
+		padding: 1rem 1rem;
 		flex-direction: column;
-		/* Stack navbar items vertically */
 		gap: 0.75rem;
-		/* Gap between navbar-left/logo and navbar-right */
-
-		.navbar-left {
-			flex-direction: column;
-			/* Stack logo and links if they were separate */
-			gap: 0.75rem;
-			/* Gap between links in the left section */
-			align-items: center;
-			/* Center items in column layout */
-			width: 100%;
-			/* Make it take full width */
-
-			>.navbar-logo {
-				margin-bottom: 0.5rem;
-				/* Add some space below logo if links stack under it */
-			}
-
-			>.hoverable-link {
-				/* Target links directly inside navbar-left */
-				font-size: 0.9rem;
-				/* Adjust font size for smaller screens */
-				padding: 0.5rem;
-				/* Increase tappable area */
-			}
-		}
-
-		.navbar-right {
-			flex-direction: column;
-			/* Stack links in the right section */
-			gap: 0.75rem;
-			/* Gap between links in the right section */
-			align-items: center;
-			/* Center items in column layout */
-			width: 100%;
-			/* Make it take full width */
-
-			>.hoverable-link {
-				/* Target links directly inside navbar-right */
-				font-size: 0.9rem;
-				/* Adjust font size for smaller screens */
-				padding: 0.5rem;
-				/* Increase tappable area */
-			}
-		}
 	}
 
 	body {
-		/* Adjust padding-top based on the new height of the stacked navbar */
-		/* This will likely be taller than 80px; measure and adjust. */
-		/* Example: */
-		padding-top: 180px;
-		/* Increased to account for taller mobile navbar */
+		padding-top: 200px;
 
 		&.no-navbar {
 			padding-top: 0;
