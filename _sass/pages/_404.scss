@@ -20,27 +20,10 @@
 	margin: 0;
 	color: var(--subtle-text-color);
 	text-align: center;
+}
 
-	a {
-		color: var(--ctp-sapphire);
-		text-decoration: none;
-
-		&.hoverable-link {
-			display: inline-block;
-			transition: all 0.2s ease-in-out;
-
-			&:hover {
-				transform: scale(1.1);
-
-				.link-text {
-					text-decoration: underline;
-				}
-			}
-		}
-
-		.bracket-open,
-		.bracket-close {
-			text-decoration: none;
-		}
+.link-home {
+	.link-text {
+		color: var(--ctp-sapphire) !important;
 	}
 }
