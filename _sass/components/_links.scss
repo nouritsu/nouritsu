@@ -1,23 +1,29 @@
-.link-about {
+.link-about,
+.link-about:hover {
 	color: var(--red);
 }
 
-.link-blog {
+.link-blog,
+.link-blog:hover {
 	color: var(--yellow);
 }
 
-.link-projects {
+.link-projects,
+.link-projects:hover {
 	color: var(--green);
 }
 
-.link-contact {
+.link-contact,
+.link-contact:hover {
 	color: var(--pink);
 }
 
-.link-cv {
+.link-cv,
+.link-cv:hover {
 	color: var(--mauve);
 }
 
-.link-github {
+.link-github,
+.link-github:hover {
 	color: var(--subtext0);
 }
