@@ -1,8 +1,8 @@
-name: Build Jekyll Site and Deploy to Hostinger FTP
+name: Build Jekyll Site and Deploy via SFTP
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   workflow_dispatch:
 
 jobs:
@@ -10,14 +10,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout/@v4
+        uses: actions/checkout@v4
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.4'
+          ruby-version: "3.4"
           bundler-cache: true
-      
+
       - name: Install Jekyll & Dependencies
         run: bundle install
 
@@ -26,14 +26,14 @@ jobs:
         env:
           JEKYLL_ENV: production
 
-      - name: Deploy Site
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-        with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USR }}
-          password: ${{ secrets.FTP_PASS }}
-          server-dir: ${{ secrets.FTP_DIR }}/
-          local-dir: ./_site/
-          dangerous-clean-slate: true # blow up / on remote before transfer
-          
-    
+      - name: Deploy via rsync
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SFTP_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H ${{ secrets.SFTP_HOST }} >> ~/.ssh/known_hosts
+
+          rsync -avz --delete \
+            -e "ssh -i ~/.ssh/deploy_key" \
+            ./_site/ \
+            ${{ secrets.SFTP_USER }}@${{ secrets.SFTP_HOST }}:/var/www/public_html/
