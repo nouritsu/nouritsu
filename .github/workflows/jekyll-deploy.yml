@@ -36,4 +36,4 @@ jobs:
           rsync -avz --delete \
             -e "ssh -i ~/.ssh/deploy_key" \
             ./_site/ \
-            ${{ secrets.SFTP_USER }}@${{ secrets.SFTP_HOST }}:/var/www/public_html/
+            ${{ secrets.SFTP_USER }}@${{ secrets.SFTP_HOST }}:/srv/www/public_html/
