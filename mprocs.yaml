@@ -1,3 +1,0 @@
-procs:
-  jekyll: bundle exec jekyll serve --watch
-  lazygit: lazygit
